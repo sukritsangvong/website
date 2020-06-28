@@ -123,6 +123,10 @@ nav ul li a:hover{
     position: relative;
 }
 
+.eachProject:hover > .eachProject-img{
+    filter: brightness(25%)
+}
+
 .eachProject-img{
     background-size: cover;
     background-position: center;
@@ -133,10 +137,32 @@ nav ul li a:hover{
 
 .eachProject-header{
     position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    top: 0%;
+    width: 100%;
+    display: inline-block;
     text-align: center;
+    background-color: rgba(80, 81, 80, 0.3);
+}
+
+.eachProject-header h2{
+    color: white;
+    font-weight: 900;
+}
+
+.eachProject-view-project{
+    position: absolute;
+    top: 82%;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.button{
+    border: 2px solid #528214;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
