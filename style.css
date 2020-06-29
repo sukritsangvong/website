@@ -101,7 +101,7 @@ nav ul li a:hover{
     
 }
 
-#About .aboutme-img img{
+#About .about-img img{
     width: 80%;
     object-fit: contain;
     margin: auto 4%;
@@ -121,10 +121,6 @@ nav ul li a:hover{
 
 .eachProject{
     position: relative;
-}
-
-.eachProject:hover > .eachProject-img{
-    filter: brightness(25%)
 }
 
 .eachProject-img{
@@ -156,12 +152,107 @@ nav ul li a:hover{
     text-align: center;
 }
 
+.eachProject-language-wraper{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.eachProject-language{
+    color: transparent;
+    text-align: center;
+    margin: auto;
+    font-weight: 900;
+    font-size: 1.5em;
+}
+
 .button{
-    border: 2px solid #528214;
-    color: white;
+    border: 2px solid transparent;
+    color: transparent;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
 }
+
+/*hover over picture*/
+.eachProject:hover > .eachProject-img{
+    filter: brightness(25%)
+}
+
+.eachProject:hover .eachProject-language{
+    color: white;
+    animation-name: slide-down;
+    animation-duration: 0.5s;
+}
+
+.eachProject:hover .button{
+    border: 2px solid #528214;
+    color: white;
+
+    animation-name: slide-up;
+    animation-duration: 0.5s;
+}
+
+
+/*animation*/
+@keyframes slide-up{
+    from{
+        transform: translateY(40%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down{
+    from{
+        transform: translateY(-40%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*Contact*/
+.footwrapper{
+    width: 100%;
+    background-color: #07192F;
+    position: relative;
+    border-top: 5px solid white;
+}
+
+.emptyspace{
+    height: 50px;
+}
+.footcontainer{
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+}
+
+.logowrapper{
+    height: 350px;
+    width: 100%;
+    text-align: center;
+}
+
+.logo{
+    margin: 0;
+}
+
+.logo img{
+    display: inline-block;
+    width: 40px;
+    
+}
+
+
