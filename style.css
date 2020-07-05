@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
@@ -9,6 +13,14 @@ body{
     background-color:#CCCECD;
     width: 85%;
     margin: 0 auto;
+}
+
+@media only screen and (min-width: 800px){
+    .page-wrapper{
+        background-color:#CCCECD;
+        width: 70%;
+        margin: 0 auto;
+    }    
 }
 
 #Home{
@@ -43,6 +55,7 @@ body{
     padding: 0;
     font-size: 4.5em;
     color: #CCCECD;
+    text-align: center;
 }
 
 #Home .home-content h4{
@@ -53,8 +66,38 @@ body{
 }
 
 #Home .home-content .sign{
-    margin: 0;
-    padding: 0;
+    padding: 18px;
+}
+
+#Home .home-content .sign a:hover{
+    background-color: #D3849A;
+    border: 3px solid #D3849A;
+}
+
+.arrow{
+    border: solid #CCCECD;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    height: 20px;
+    width: 20px;
+    bottom: 0;
+    margin: 10px; 
+}
+
+.home-content a:hover > .arrow {
+    border: solid #D3849A; 
+    border-width: 0 3px 3px 0;
+}
+
+
+#Home .home-content .sign a{
+    color: #CCCECD;
+    text-decoration: none;
+    padding: 5px;
+    border: 3px solid #CCCECD;
 }
 
 nav{
@@ -91,14 +134,13 @@ nav ul li a:hover{
     display: block;
     
 }
-
+ 
 .sub-headline{
     margin: 0;
     padding: 0;
     font-size: 20px;
     color:  #07192F;
-    text-align: center;
-    
+    text-align: center;  
 }
 
 #About .about-img img{
@@ -107,9 +149,31 @@ nav ul li a:hover{
     margin: auto 4%;
 }
 
+.blue-text {
+    color: #07192F;
+    text-decoration: underline;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+.important-content{
+    font-style: oblique;
+}
+
 .two-column-wrapper{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+@media only screen and (min-width: 1000px){
+    .two-column-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.same-content p{
+    margin: 0;
 }
 
 .two-column-wrapper .about-content p{
@@ -120,10 +184,14 @@ nav ul li a:hover{
 
 /*Project*/
 .project-wrapper{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr
-    /*grid-template-columns: repeat(auto-fill, minmax(400px, 1fr))*/
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr))
+}
 
+@media only screen and (min-width: 1400px){
+    .project-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr
+    }
 }
 
 .eachProject{
