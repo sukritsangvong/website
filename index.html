@@ -196,5 +196,23 @@
                 </div>
             </div>      
         </div>
+        <script type="text/javascript">
+            window.addEventListener("scroll",() => {
+                var subHeadline = document.querySelector(".sub-headline");
+                var aboutImage = document.querySelector(".about-img");
+                var aboutContent = document.querySelector(".about-content");
+                subHeadline.classList.toggle("animated", window.scrollY > 0);
+                aboutImage.classList.toggle("animated", window.scrollY > 0);
+                aboutContent.classList.toggle("animated", window.scrollY > 0);
+
+                var projects = document.querySelector("#Projects");
+                projects.classList.toggle("animated", window.scrollY > 0);
+            })
+            
+
+
+        </script>
     </body>
 </html>
+
+

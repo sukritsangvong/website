@@ -105,17 +105,21 @@ nav{
     height: 50px;
     background-color: #07192F;
     padding: 0;
+
 }
+
 
 nav ul{
     margin: 0;
     padding: 0;
+    
 }
 
 nav ul li{
     list-style: none;
     float: left;
     line-height: 50px;
+    
 }
 
 nav ul li a{
@@ -140,13 +144,28 @@ nav ul li a:hover{
     padding: 0;
     font-size: 20px;
     color:  #07192F;
-    text-align: center;  
+    text-align: center; 
+}
+
+.sub-headline.animated{
+    animation-name: slide-from-right;
+    animation-duration: 1s;
 }
 
 #About .about-img img{
     width: 80%;
     object-fit: contain;
     margin: auto 4%;
+}
+
+.about-img.animated img{
+    animation-name: slide-from-left;
+    animation-duration: 1s;
+}
+
+.about-content.animated{
+    animation-name: slide-from-right;
+    animation-duration: 1s;
 }
 
 .blue-text {
@@ -192,6 +211,18 @@ nav ul li a:hover{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr
     }
+}
+
+#Projects.animated .sub-headline{
+    transition-delay: 0.5s;
+    animation-name: slide-from-right;
+    animation-duration: 1s;
+}
+
+#Projects.animated .eachProject{
+    transition-delay: 1s;
+    animation-name: slide-up;
+    animation-duration: 2s;
 }
 
 .eachProject{
@@ -292,6 +323,28 @@ nav ul li a:hover{
     }
     to{
         transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-from-right{
+    from{
+        transform: translateX(40%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-from-left{
+    from{
+        transform: translateX(-40%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
         opacity: 1;
     }
 }
