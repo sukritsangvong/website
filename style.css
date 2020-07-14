@@ -64,15 +64,6 @@ body{
     color: #CCCECD;
 }
 
-.sign{
-    padding: 18px;
-}
-
-.sign a:hover{
-    background-color: #D3849A;
-    border: 3px solid #D3849A;
-}
-
 .arrow{
     border: solid #CCCECD;
     border-width: 0 3px 3px 0;
@@ -97,6 +88,15 @@ body{
     text-decoration: none;
     padding: 5px;
     border: 3px solid #CCCECD;
+}
+
+.sign{
+    padding: 18px;
+}
+
+#Home .home-content .sign a:hover{
+    background-color: #D3849A;
+    border: 3px solid #D3849A;
 }
 
 nav{
@@ -329,7 +329,7 @@ nav ul li a:hover{
 
 @keyframes slide-from-right{
     from{
-        transform: translateX(40%);
+        transform: translateX(20%);
         opacity: 0;
     }
     to{
@@ -518,6 +518,11 @@ nav ul li a:hover{
         justify-content: center;
         align-items: center;
     } 
+}
+
+.sign a:hover{
+    background-color: #D3849A;
+    border: 3px solid #D3849A;
 }
 
 .extra-button{
