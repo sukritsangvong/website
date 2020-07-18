@@ -502,7 +502,9 @@ nav ul li a:hover{
     position: fixed;
     justify-content: center;
     align-items: center;
-} 
+}  
+
+
 
 @media only screen and (min-width: 1400px){
     .footer{
@@ -520,17 +522,17 @@ nav ul li a:hover{
     } 
 }
 
-.sign a:hover{
+.footer .sign a:hover{
     background-color: #D3849A;
     border: 3px solid #D3849A;
 }
 
-.extra-button{
+.footer .extra-button{
     display: inline;  
 
 }
 
-.extra-button a{
+.footer .extra-button a{
     color: #CCCECD;
     text-decoration: none;
     border: 3px solid #CCCECD;
